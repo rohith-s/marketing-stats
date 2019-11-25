@@ -8,7 +8,7 @@ var express = require('express'),
     port    = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 app.use('/api', require('./routes/api.js'));
 app.get('/',function (req, res) {
-    req.status(200).send("landed");
+    res.status(200).send("landed");
 })
 app.set('port',port);
 process.env.port = port;
