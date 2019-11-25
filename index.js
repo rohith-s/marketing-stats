@@ -5,12 +5,17 @@ var express = require('express'),
     config  = require('./config'),
     app     = new express(),
     server  = http.createServer(app),
-    port    = config.port;
+    port    = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 app.use('/api', require('./routes/api.js'));
 app.set('port',port);
 process.env.port = port;
 var server = http.createServer(app);
-server.listen(port);
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+console.log('port:',port);
+console.log('server_ip_address:',server_ip_address);
+server.listen(port, server_ip_address, function () {
+    console.log( "Listening on " + server_ip_address + ", port " + server_port )
+});
 server.on('error', onError);
 server.on('listening', onListening);
 
