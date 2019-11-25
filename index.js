@@ -13,7 +13,7 @@ app.get('/',function (req, res) {
 app.set('port',port);
 process.env.port = port;
 var server = http.createServer(app);
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
 console.log('port:',port);
 console.log('server_ip_address:',server_ip_address);
 server.listen(port, server_ip_address, function () {
