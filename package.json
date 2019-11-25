@@ -1,0 +1,27 @@
+{
+  "name": "marketing-stats",
+  "version": "1.0.0",
+  "description": "Marketing Stats ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohith-s/marketing-stats.git"
+  },
+  "keywords": [
+    "stats",
+    "marketing"
+  ],
+  "author": "Rohith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohith-s/marketing-stats/issues"
+  },
+  "homepage": "https://github.com/rohith-s/marketing-stats#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
