@@ -7,6 +7,9 @@ var express = require('express'),
     server  = http.createServer(app),
     port    = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 app.use('/api', require('./routes/api.js'));
+app.get('/',function (req, res) {
+    req.status(200).send("landed");
+})
 app.set('port',port);
 process.env.port = port;
 var server = http.createServer(app);
