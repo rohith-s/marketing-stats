@@ -53,7 +53,7 @@ function onError(error) {
     }
 }
 process.once('SIGINT', function() {
-    log('App terminated - closing in 3 seconds to allow graceful DB disconnects');
+    console.log('App terminated - closing in 3 seconds to allow graceful DB disconnects');
     setTimeout(function(){
         process.exit(0);
     }, 3000);

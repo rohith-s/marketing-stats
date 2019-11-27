@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev" : "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/rohith-s/marketing-stats#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mail-merger": "^1.1.4",
     "request": "^2.88.0"
   }
 }
