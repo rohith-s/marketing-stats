@@ -12,10 +12,11 @@ router.get('/test', function (req, res) {
 })
     .get('/incrementHits',function (req, res) {
         count ++;
-        res.status(200);
+        res.status(200).set('Content-Type', 'application/json').json( {"status":"ok"} );
     })
     .get('/hits',function (req, res) {
-        res.status(200).send(count);
+        // res.sendStatus(200).;
+        res.status(200).set('Content-Type', 'application/json').json( {"status":"ok","count":count} );
     })
     .get('/logo', function (req, res) {
         var url = config.image_url;
