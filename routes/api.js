@@ -4,7 +4,7 @@ var express = require('express'),
     request = require('request'),
     stream = require('stream'),
     config = require('../config'),
-    mail =require('../lib/mail'),
+    mail = require('../lib/mail'),
     count = 0;
 // mail.sendTestEmail();
 router.get('/test', function (req, res) {
@@ -42,6 +42,7 @@ router.get('/test', function (req, res) {
         console.log("started download");
         download(url, localPath, function () {
             console.log('download completed ');
+            count ++;
 
             const r = fs.createReadStream(localPath); // or any other way to get a readable stream
             const ps = new stream.PassThrough();// <---- this makes a trick with stream error handling
