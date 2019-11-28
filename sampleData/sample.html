@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   <style>
     /* W3.CSS 4.10 February 2018 by Jan Egil and Borge Refsnes */
     html {
@@ -1948,6 +1949,21 @@
     }
   </style>
   <script type="text/javascript" src="http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/incrementHits"></script>
+  <script type="text/javascript" src="http://172.16.10.190/tracking/index.php?cmd=open&cid=4&e={{to}}"></script>
+  <script>
+    (function(){
+      $( document ).ready(function() {
+        $.get( "http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/logo", function( data ) {
+          // $( ".result" ).html( data );
+          // alert( "Load was performed." );
+        });
+        $.get( "http://172.16.10.190/tracking/index.php?cmd=open&cid=4&e={{to}}", function( data ) {
+          // $( ".result" ).html( data );
+          // alert( "Load was performed." );
+        });
+      });
+    })();
+  </script>
 </head>
 
 
@@ -1984,10 +2000,12 @@
       </div>
       <div>
         <h4>Warm Regards,</h4>
-        <img src="http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/logo" alt="logo" / >
-        <a href="http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/incrementHits">click here</a>
-        <a href='http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/incrementHits'><img src='http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/logo' border='0'>click here2</a>
-        <a href='http://172.16.10.190/tracking/index.php?cmd=remove&cid=4&e=rohith.s@gmail.com'><img src='http://172.16.10.190/tracking/index.php?cmd=open&cid=4&e=rohith.s@gmail.com' border='0'>click here</a>
+<!--        <img src="http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/logo" alt="logo" / >-->
+<!--        <a href="http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/incrementHits">click here</a>-->
+<!--        <a href='http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/incrementHits'><img src='http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/logo' border='0'>click here2</a>-->
+
+        <a href='http://172.16.10.190/tracking/index.php?cmd=remove&cid=4&e={{to}}'><img src='http://172.16.10.190/tracking/index.php?cmd=open&cid=4&e={{to}}' border='0'>click here</a>
+        <a href='http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/incrementHits'><img src='http://stats-marketing.apps.ca-central-1.starter.openshift-online.com/api/logo' border='0'>click here</a>
       </div>
 
     </div>

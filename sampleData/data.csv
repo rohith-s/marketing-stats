@@ -1,2 +1,3 @@
 "id","customer","items_.name","items_.price","contact","to","cc"
-1,"Customer A","Monitor","$200.00","John","rohith.s@congruentglobal.com","joseph.s@congruentglobal.com"
+1,"Customer A","Monitor","$200.00","John","rohith.s@congruentglobal.com",""
+2,"Customer B","Monitor","$201.00","John","joseph.s@congruentglobal.com",""
